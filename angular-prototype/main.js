@@ -622,7 +622,6 @@ var MyFormComponent = /** @class */ (function () {
     function MyFormComponent(store, fb) {
         this.store = store;
         this.options = fb.group({ floatLabel: 'auto' });
-        console.log(this.store.select(_reducers__WEBPACK_IMPORTED_MODULE_4__["getGroupForm"]).subscribe(function (form) { return console.log(form); }));
         this.form$ = this.store.select(_reducers__WEBPACK_IMPORTED_MODULE_4__["getGroupForm"]);
     }
     MyFormComponent.prototype.ngOnInit = function () {
