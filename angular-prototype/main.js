@@ -1042,7 +1042,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-var formUrl = 'assets/mock-data.json';
+var formUrl = 'angular-prototype/assets/mock-data.json';
 var FormService = /** @class */ (function () {
     function FormService(http) {
         this.http = http;
