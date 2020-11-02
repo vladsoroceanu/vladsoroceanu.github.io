@@ -1,8 +1,8 @@
 import Axios from "axios";
 
 const getPdfFile = () => {
-  return Axios.get("./dummy.pdf", {
-    responseType: "arraybuffer",
+  return Axios.get("dummy.pdf", {
+    responseType: "blob",
     headers: { Accept: "application/pdf" },
   });
 };
@@ -13,9 +13,10 @@ window.onload = async () => {
   try {
     const { data } = await getPdfFile();
     console.log(data);
-    const file = new Blob([data], { type: "application/pdf" });
+    // const file = new Blob([data], { type: "application/pdf" });
+    // console.log(file);
     const link = document.querySelector("#download-blob");
-    link.href = window.URL.createObjectURL(file);
+    link.href = window.URL.createObjectURL(data);
     link.download = "byte-array-pdf";
   } catch (e) {
     throw Error(e);
