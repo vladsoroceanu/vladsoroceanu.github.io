@@ -1,0 +1,30 @@
+{
+  "name": "vladsoroceanu.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladsoroceanu/vladsoroceanu.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vladsoroceanu/vladsoroceanu.github.io/issues"
+  },
+  "homepage": "https://github.com/vladsoroceanu/vladsoroceanu.github.io#readme",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "parcel": "^1.12.4"
+  },
+  "browserslist": [
+    "last 3 and_chr versions",
+    "last 3 chrome versions",
+    "last 3 opera versions",
+    "last 3 ios_saf versions",
+    "last 3 safari versions"
+  ]
+}
