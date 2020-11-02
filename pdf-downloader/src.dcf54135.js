@@ -55,6 +55,6 @@ var e=require("process"),t=require("./utils"),r=require("./helpers/normalizeHead
 },{"./utils":"zIVT","./helpers/bind":"nb4k","./core/Axios":"RB6n","./core/mergeConfig":"Qj6T","./defaults":"T2kP","./cancel/Cancel":"RlDD","./cancel/CancelToken":"VWBb","./cancel/isCancel":"C9l1","./helpers/spread":"Kbjq"}],"uj17":[function(require,module,exports) {
 module.exports=require("./lib/axios");
 },{"./lib/axios":"HXpE"}],"Focm":[function(require,module,exports) {
-"use strict";var e=o(require("axios"));function o(e){return e&&e.__esModule?e:{default:e}}const a=()=>e.default.get("dummy.pdf",{responseType:"arraybuffer",headers:{Accept:"application/pdf"}});window.onload=(async()=>{try{const{data:o}=await a();console.log(o);const r=new Blob([o]),t=document.querySelector("#download-blob");t.href=window.URL.createObjectURL(r),t.download="byte-array-pdf"}catch(e){console.error(e)}});
+"use strict";var e=o(require("axios"));function o(e){return e&&e.__esModule?e:{default:e}}const r=()=>e.default.get("/pdf-downloader/dummy.pdf",{responseType:"arraybuffer",headers:{Accept:"application/pdf"}});window.onload=(async()=>{try{const{data:o}=await r();console.log(o);const a=new Blob([o]),t=document.querySelector("#download-blob");t.href=window.URL.createObjectURL(a),t.download="byte-array-pdf"}catch(e){throw Error(e)}});
 },{"axios":"uj17"}]},{},["Focm"], null)
-//# sourceMappingURL=/src.724e0fed.js.map
+//# sourceMappingURL=/src.dcf54135.js.map

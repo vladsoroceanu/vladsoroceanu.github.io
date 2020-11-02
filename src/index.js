@@ -1,11 +1,13 @@
 import Axios from "axios";
 
 const getPdfFile = () => {
-  return Axios.get("dummy.pdf", {
+  return Axios.get("/pdf-downloader/dummy.pdf", {
     responseType: "arraybuffer",
     headers: { Accept: "application/pdf" },
   });
 };
+
+
 
 window.onload = async () => {
   try {
@@ -16,7 +18,7 @@ window.onload = async () => {
     link.href = window.URL.createObjectURL(file);
     link.download = "byte-array-pdf";
   } catch (e) {
-    console.error(e);
+    throw Error(e);
   }
 };
 
