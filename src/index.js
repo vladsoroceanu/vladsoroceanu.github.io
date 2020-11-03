@@ -13,7 +13,7 @@ window.onload = async () => {
   try {
     const { data } = await getPdfFile();
     console.log(data);
-    const file = new Blob([data], { type: "application/octet-stream" });
+    const file = new Blob([data], { type: "application/pdf" });
     console.log(file);
     const link = document.querySelector("#download-blob");
     link.href = window.URL.createObjectURL(file);
