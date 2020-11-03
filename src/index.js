@@ -18,6 +18,7 @@ window.onload = async () => {
     const link = document.querySelector("#download-blob");
     link.href = window.URL.createObjectURL(file);
     link.download = "byte-array-file.pdf";
+    link.target = "_blank";
   } catch (e) {
     throw Error(e);
   }
