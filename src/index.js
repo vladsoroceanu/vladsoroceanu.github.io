@@ -12,12 +12,12 @@ const getPdfFile = () => {
 window.onload = async () => {
   try {
     const { data } = await getPdfFile();
-    console.log(data);
     const file = new Blob([data], { type: "application/pdf" });
-    console.log(file);
     const link = document.querySelector("#download-blob");
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
     link.href = window.URL.createObjectURL(file);
-    // link.download = "byte-array-file.pdf";
+    link.download = "byte-array-file.pdf";
   } catch (e) {
     throw Error(e);
   }
